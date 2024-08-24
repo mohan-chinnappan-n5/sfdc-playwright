@@ -36,7 +36,7 @@ test("ThankYouKen", async ({ page }) => {
   console.log(text);
 });
 
-test("ThankYouNew", async ({ page }) => {
+test("ThankYouCardsGen", async ({ page }) => {
   const greetings = [
     {
       to: "Dennis M Ritchie",
