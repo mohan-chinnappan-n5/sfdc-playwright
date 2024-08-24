@@ -40,17 +40,32 @@ test("ThankYouNew", async ({ page }) => {
   const greetings = [
     {
       to: "Dennis M Ritchie",
-      from: "Mohanasundaram  Chinnappan",
+      from: "Mohan  Chinnappan",
       msg: " I am writing to express my heartfelt appreciation and gratitude to you for creating C Language,  Unix Operating System,  Plan9 OS and many others",
       template: "We stand on your shoulders! Thank you for your lovely and exceptional contributions."
     },
 
     {
       to: "Ken Thompson",
-      from: "Mohanasundaram  Chinnappan",
+      from: "Mohan  Chinnappan",
       msg: " I am writing to express my heartfelt appreciation and gratitude to you for creating B Language,  Unix Operating System, ed, grep, UTF-8, Go Language and many others",
       template: "We stand on your shoulders! Thank you for your lovely and exceptional contributions."
     },
+
+    {
+      to: "Elon Musk",
+      from: "Mohan  Chinnappan",
+      msg: " I am writing to express my heartfelt appreciation and gratitude to you for efforts in Electric Vehicle Development, Rocket Technology" ,
+      template: "We stand on your shoulders! Thank you for your lovely and exceptional contributions."
+    },
+
+    {
+      to: "Dr. Adbul Kalam",
+      from: "Mohanasundaram  Chinnappan",
+      msg: " I am writing to express my heartfelt appreciation and gratitude to you for efforts in guiding Indians to prepare for the future" ,
+      template: "We stand on your shoulders! Thank you for your lovely and exceptional contributions."
+    },
+
 
   ];
 
