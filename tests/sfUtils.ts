@@ -72,4 +72,26 @@ export class Utils {
         }
     }
 
+ 
+    /*
+       Command to create a SFDX Project
+    */
+
+    static createSFDXProject = projectName => {
+        return `sf project generate -n projectName`
+    }
+
+    /*
+       getting the CustomField metadata using sfdx
+       Note: make to run them inside a sfdx project
+    */
+
+    static getCustomFieldCmd = (object, field, orgName) => {
+        return `sf force source retrieve -m CustomField:${object}.${field} -o ${orgName}`
+    }
+
+    static deployCustomFieldCmd = (object, field, orgName) => {
+        return `sf project deploy start -m CustomField:${object}.${field} -o ${orgName}`
+    }
+
 }
