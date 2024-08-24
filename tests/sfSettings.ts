@@ -67,8 +67,8 @@ export class SFSettings {
      * Each account includes a name and a number.
      */
     static readonly sampleAccounts = [
-      { name: "MCTest10", number: "101010" },
-      { name: "MCTest11", number: "111111" },
+      { name: "MCTest12", number: "121212" },
+      { name: "MCTest13", number: "131313" },
     ];
   
     /**

@@ -181,7 +181,7 @@ test("RunOptimizer", async ({ page }) => {
  * so when next time users log in, they will be asked to set their passwords to a new value.
  
  */
-test("Security: PasswordRest for all users", async ({ page }) => {
+test("Security: PasswordReset for all users", async ({ page }) => {
   const results = await performSfLoginSetup(page);
   const instanceUrl = results.instanceUrl;
   console.log(`Navigating to ${instanceUrl}`);
