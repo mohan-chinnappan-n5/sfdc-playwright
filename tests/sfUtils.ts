@@ -31,6 +31,17 @@ export class Utils {
         }
     }
 
+    // salesforce.com url to force.com convertor
+
+    static sf2lexUrl(url: string ): string | null {
+        try {
+            return  url.replace('.my.salesforce.com', '.lightning.force.com');
+        } catch (e) {
+            console.error("Invalid URL provided:", e);
+            return null;
+        }
+    }
+
     /**
      * Opens a Salesforce organization in a browser window and extracts relevant details.
      * 
