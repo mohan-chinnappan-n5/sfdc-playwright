@@ -108,6 +108,15 @@ export class SFSettings {
 
 
     // myDomain url
-    static readonly lexMyDomainUrl = '/lightning/setup/OrgDomain/home'
-  }
+    static readonly lexMyDomainUrl = 'lightning/setup/OrgDomain/home'
+
+    // objectManager url
+    static readonly objectMgrUrl = 'lightning/setup/ObjectManager/home'
+
+    static getOMObjectUrl = (object) => { return `lightning/setup/${object}/Asset/Details/View`;}
+    static getOMObjectFieldsUrl = (object) => { return `lightning/setup/ObjectManager/${object}/FieldsAndRelationships/View`;}
+    static getOMObjectFieldUrl = (object, field) => { return `lightning/setup/ObjectManager/${object}/FieldsAndRelationships/${field}/view`;}
+
+
+  } 
   

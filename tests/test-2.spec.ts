@@ -193,9 +193,9 @@ test("Security: PasswordRest for all users", async ({ page }) => {
 
 
 /**
- * Test: Security Health Check 
+ * Test: Setup Edge
  *
- * Goes the page:  Security Health Check  
+ * Goes to the page:  Security Health Check  
  
  */
 test("Perf: Edge Setup", async ({ page }) => {
@@ -205,4 +205,32 @@ test("Perf: Edge Setup", async ({ page }) => {
   await page.goto(`${lexInstanceUrl}/${SFSettings.lexMyDomainUrl}`);
 
 });
+
+/**
+ * Test: ObjectManger
+ *
+ * Goes to the page:  Security Health Check  
+ 
+ */
+test("OM", async ({ page }) => {
+  const results = await performSfLogin(page);
+  const lexInstanceUrl = Utils.sf2lexUrl(results.instanceUrl) ;
+  console.log(`Navigating to ${lexInstanceUrl}`);
+  await page.goto(`${lexInstanceUrl}/${SFSettings.objectMgrUrl}`);
+});
+
+const omObjectField = {
+  objectName: 'Account',
+ stdFieldName : 'BillingAddress'
+}
+test("OM Object Fields", async ({ page }) => {
+  const results = await performSfLogin(page);
+  const lexInstanceUrl = Utils.sf2lexUrl(results.instanceUrl) ;
+  console.log(`Navigating to ${lexInstanceUrl}`);
+  // await page.goto(`${lexInstanceUrl}/${SFSettings.getOMObjectFieldsUrl(omObjectField.objectName)}`);
+  await page.goto(`${lexInstanceUrl}/${SFSettings.getOMObjectFieldUrl(omObjectField.objectName, omObjectField.stdFieldName)}`);
+
+});
+
+
 
