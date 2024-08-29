@@ -72,6 +72,8 @@ test('StocksQuotes', async ({ page }) => {
 
 test('StocksQuotes2', async ({ page }) => {
 
+  test.slow();
+
   let output = '';
   const tableData = [];
 
