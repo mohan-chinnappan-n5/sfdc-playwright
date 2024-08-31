@@ -20,11 +20,9 @@ test("LicensePlateGen", async ({ page }) => {
 
 
 test("LicensePlateGenMulti", async ({ page }) => {
-
   await page.goto(
     "https://mohan-chinnappan-n5.github.io/common/license-plate/index.html"
   );
-
   const states = SFSettings.states;
 
   for (const state of states) {
