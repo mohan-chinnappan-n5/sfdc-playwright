@@ -1,5 +1,7 @@
 import { test, expect } from "@playwright/test";
 
+import { SFSettings } from "./sfSettings";
+
 test("LicensePlateGen", async ({ page }) => {
 
   await page.goto(
@@ -23,7 +25,7 @@ test("LicensePlateGenMulti", async ({ page }) => {
     "https://mohan-chinnappan-n5.github.io/common/license-plate/index.html"
   );
 
-  const states = ['New Jersey', 'New York', 'California'];
+  const states = SFSettings.states;
 
   for (const state of states) {
     await page.getByRole('combobox').selectOption(state);
