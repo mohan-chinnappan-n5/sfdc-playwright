@@ -33,7 +33,7 @@ test("LicensePlateGenMulti", async ({ page }) => {
     await page.getByRole('textbox').nth(2).fill('#1675d4');
     await page.getByRole('textbox').nth(3).click();
     await page.getByRole('textbox').nth(3).fill('#4f0808');
-    await page.screenshot({ path: `${(state).replace(' ','_')}.png`, fullPage: true });
+    await page.screenshot({ path: `output/license/${(state).replace(' ','_')}.png`, fullPage: true });
   }
 });
 

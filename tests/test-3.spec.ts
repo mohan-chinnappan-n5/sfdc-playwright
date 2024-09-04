@@ -4,7 +4,7 @@ import path from 'path';
 import { exec } from 'child_process';
 
 const stocks = ['CRM', 'NVDA', 'ORCL', 'TSLA', 'AMD', 'AAPL', 'SMCI', 'META', 'SNOW', 'MSFT'].sort();
-const needAfterHours = true;
+const needAfterHours = false;
 const needHtmlOutput = true;
 const needConsoleTable = true;
 const viewInBrowser = true;

@@ -84,6 +84,6 @@ test("ThankYouCardsGen", async ({ page }) => {
     await page.getByRole("button", { name: "Generate Appreciation" }).click();
     await page.getByRole("button", { name: "Create Image" }).click();
 
-    await page.screenshot({ path: `${(greeting.to).replace(' ','_')}.png`, fullPage: true });
+    await page.screenshot({ path: `output/thankyou/${(greeting.to).replace(' ','_')}.png`, fullPage: true });
     }
 });
