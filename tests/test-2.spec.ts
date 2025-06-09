@@ -232,5 +232,21 @@ test("OM Object Fields", async ({ page }) => {
 
 });
 
+test("Enhance Profile List Views", async ({ page }) => {
+  const results = await performSfLogin(page);
+  const lexInstanceUrl = Utils.sf2lexUrl(results.instanceUrl) ;
+  console.log(`Navigating to ${lexInstanceUrl}`);
+  // await page.goto(`${lexInstanceUrl}/${SFSettings.getOMObjectFieldsUrl(omObjectField.objectName)}`);
+  await page.goto(`${lexInstanceUrl}/${SFSettings.getUserManagementUrl()}`);
+  
+  await page.locator('#enhancedProfileManagement div').nth(1).click();
+  await page.locator('#newProfileUi div').nth(1).click();
+  await page.locator('#enhancedPermsetManagement div').nth(1).click();
+  await page.locator('#enhancedPermSetList div').nth(1).click();
+
+
+
+});
+
 
 

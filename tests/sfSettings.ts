@@ -67,8 +67,8 @@ export class SFSettings {
      * Each account includes a name and a number.
      */
     static readonly sampleAccounts = [
-      { name: "MCTest12", number: "121212" },
-      { name: "MCTest13", number: "131313" },
+      { name: "MCTest1200", number: "12121222" },
+      { name: "MCTest1300", number: "13131333" },
     ];
 
     static readonly   states = [
@@ -170,6 +170,7 @@ export class SFSettings {
     static getOMObjectFieldsUrl = (object) => { return `lightning/setup/ObjectManager/${object}/FieldsAndRelationships/View`;}
     static getOMObjectFieldUrl = (object, field) => { return `lightning/setup/ObjectManager/${object}/FieldsAndRelationships/${field}/view`;}
 
+    static getUserManagementUrl = () => { return `lightning/setup/UserManagementSettings/home`; }
 
   } 
   
